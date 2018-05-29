@@ -1,0 +1,14 @@
+<h1>Restaurants#show</h1>
+<p>Find me in app/views/restaurants/show.html.erb</p>
+
+
+<div class="container">
+  <div class="content">
+    <%= @restaurant.name %>
+    <%= link_to "Go back to list", restaurants_path %>
+    <br> <hr />
+    <%= @restaurant.address %> <br>
+    <%= @restaurant.category.capitalize %> <br>
+    <%= @restaurant.phone_number %> <br>
+  </div>
+</div>

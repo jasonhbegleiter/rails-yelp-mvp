@@ -10,5 +10,18 @@
     <%= @restaurant.address %> <br>
     <%= @restaurant.category.capitalize %> <br>
     <%= @restaurant.phone_number %> <br>
+  </div> <br>
+
+  <div class="reviews">
+    <h3>Reviews</h3>
+    <%= link_to "Create New Review", new_restaurant_review_path(@restaurant) %>
+    <ul>
+      <% @reviews.each do |r| %>
+        <li>
+          <%= r.content %> <br>
+          <%= r.rating %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
